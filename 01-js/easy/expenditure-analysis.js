@@ -9,7 +9,23 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
-  return [];
+
+  let foodPrice = 0 , clothingPrice = 0, electronicsPrice = 0;
+  for( let i of transactions){
+    if(i.category === 'Food'){
+      foodPrice += i.price;
+    }
+
+    if(i.category === 'Clothing'){
+      clothingPrice += i.price;
+    }
+
+    if(i.category === 'Electronics'){
+      electronicsPrice += i.price;
+    }
+  }
+
+
 }
 
 module.exports = calculateTotalSpentByCategory;
